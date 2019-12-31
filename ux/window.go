@@ -65,7 +65,7 @@ func NewGlfwWindow(title string, width, height int) (Window, error) {
 
 		win.MakeContextCurrent()
 		win.SetKeyCallback(result.keyCallback)
-		glfw.SwapInterval(0)
+		// glfw.SwapInterval(0)
 	})
 
 	return result, err
