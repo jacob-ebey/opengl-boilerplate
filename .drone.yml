@@ -3,7 +3,10 @@ type: docker
 name: ci-pipeline
 
 steps:
-- name: build
-  image: golang:1.13
-  commands:
-  - go build ./main.go
+  - name: build
+    image: golang:1.13
+    environment:
+      GO111MODULE: on
+      CGO_ENABLED=1
+    commands:
+      - go build ./main.go
