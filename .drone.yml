@@ -4,7 +4,7 @@ name: ci-pipeline
 
 steps:
   - name: build
-    image: golang:1.13
+    image: jacob9706/golang-opengl:1.13
     environment:
       GO111MODULE: on
       CGO_ENABLED: 1
